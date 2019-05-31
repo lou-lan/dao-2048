@@ -1,0 +1,18 @@
+kind: pipeline
+steps:
+- name: test
+  image: golang
+  commands:
+  - sleep 10
+  - echo 123
+  - sleep 10
+  - echo 123
+  - sleep 10
+  - echo 123
+  - sleep 10
+  - echo 123
+services:
+- name: database
+  image: mysql
+  ports:
+  - 3306
